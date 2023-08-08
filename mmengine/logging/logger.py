@@ -64,8 +64,8 @@ class MMFormatter(logging.Formatter):
         assert not (not color and blink), (
             'blink should only be available when color is True')
         # Get prefix format according to color.
-        error_prefix = self._get_prefix('ERROR', color, blink=True)
-        warn_prefix = self._get_prefix('WARNING', color, blink=True)
+        error_prefix = self._get_prefix('ERROR', color, blink)
+        warn_prefix = self._get_prefix('WARNING', color, blink)
         info_prefix = self._get_prefix('INFO', color, blink)
         debug_prefix = self._get_prefix('DEBUG', color, blink)
 
